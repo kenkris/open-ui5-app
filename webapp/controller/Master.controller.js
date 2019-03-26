@@ -221,6 +221,11 @@ sap.ui.define([
 			this._oList.getBinding("items").sort(aSorters);
 		},
 
+        openAddProduct : function(){
+            console.log("Go to add new ");
+            this.getRouter().navTo("addProduct");
+        },
+
 		/**
 		 * Event handler for the list selection event
 		 * @param {sap.ui.base.Event} oEvent the list selectionChange event
