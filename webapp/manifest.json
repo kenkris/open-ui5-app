@@ -18,7 +18,8 @@
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
-					"localUri": "localService/product-metadata.xml"
+                    "localUri": "localService/product-metadata.xml",
+                    "useBatch": false
 				}
 			}
 		}
@@ -74,7 +75,7 @@
 				"dataSource": "mainService",
 				"preload": true
 			}
-		},
+        },
 
 		"routing": {
 			"config": {
