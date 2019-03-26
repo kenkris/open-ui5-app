@@ -283,7 +283,8 @@ sap.ui.define([
 				title: this.getResourceBundle().getText("masterTitleCount", [0]),
 				noDataText: this.getResourceBundle().getText("masterListNoDataText"),
 				sortBy: "Name",
-				groupBy: "None"
+                groupBy: "None",
+                currency: "$"
 			});
 		},
 
