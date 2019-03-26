@@ -28,14 +28,16 @@
                 selectionChange=".onSelectionChange">
                 <items>
                     <ObjectListItem
-                        type="Navigation"
-                        press=".onSelectionChange"
+                        type="Active"
                         title="{Name}"
                         number="{
                             path: 'Price',
                             formatter: '.formatter.currencyValue'
                         }"
                         numberUnit="{masterView>/currency}">
+                        <attributes>
+					        <ObjectAttribute text="Cat. here" />
+				        </attributes>
                     </ObjectListItem>
                 </items>
             </List>
