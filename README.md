@@ -21,14 +21,14 @@ For installation instructions please see [Installing the UI5 CLI](https://github
 1. Configure data source. Set uri and localUri for the meta data.
 	```json
 	"dataSources": {
-			"mainService": {
-				"uri": "https://cors-anywhere.herokuapp.com/https://services.odata.org/V2/(S(qjoxeb03mev4wjl2ls04k32m))/OData/OData.svc/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0",
-                    "localUri": "localService/product-metadata.xml",
-                    "useBatch": false
-				}
+		"mainService": {
+			"uri": "https://cors-anywhere.herokuapp.com/https://services.odata.org/V2/(S(qjoxeb03mev4wjl2ls04k32m))/OData/OData.svc/",
+			"type": "OData",
+			"settings": {
+				"odataVersion": "2.0",
+                    		"localUri": "localService/product-metadata.xml",
+                    		"useBatch": false
 			}
 		}
+	}
 	```
