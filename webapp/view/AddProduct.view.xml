@@ -1,9 +1,56 @@
 <mvc:View
 	controllerName="sap.ui.demo.masterdetail.controller.AddProduct"
 	xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
 	xmlns:mvc="sap.ui.core.mvc">
 
-    <page
-        title="Add product">
-    </page>
+    <Page
+		id="page"
+		showHeader="true"
+        class="sapThemeBaseBG">
+		<customHeader>
+			<Bar>
+				<contentRight>
+					<Button id="create" text="Create" type="Emphasized" press="createProduct" />
+				</contentRight>
+			</Bar>
+		</customHeader>
+
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm id="productCreateForm"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="Add product"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false" >
+                <f:content>
+                    <Label text="Name" />
+                    <Input id="name" />
+                    <Label text="Price" />
+                    <Input id="price" />
+                    <Label text="Rating" />
+                    <Input id="rating" />
+                    <Label text="Release date" />
+                    <DatePicker
+			            id="ReleaseDateDP"
+                        change="releaseDateChanged"
+                        valueFormat="dd-MM-yyyy"
+			            placeholder="Enter Date ..."
+			            class="sapUiSmallMarginBottom"/>
+		<Label text="DatePicker with initialFocusedDateValue new Date(2017, 5, 13)" labelFor="DP8"/>
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+	</Page>
 </mvc:View>

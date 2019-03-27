@@ -45,7 +45,7 @@
         <footer>
 			<Toolbar>
 				<ToolbarSpacer/>
-				<Button text="Add" type="Accept" press="openAddProduct" />
+				<Button text="Create new" type="Accept" press="openAddProduct" />
 			</Toolbar>
 		</footer>
     </page>
