@@ -3,8 +3,6 @@ sap.ui.define([
 ],  function (BaseController) {
     "use strict";
 
-    var that = "";
-
     return BaseController.extend("sap.ui.demo.masterdetail.controller.AddProduct", {
 
         oModel : new sap.ui.model.odata.v2.ODataModel("https://cors-anywhere.herokuapp.com/https://services.odata.org/V2/(S(qjoxeb03mev4wjl2ls04k32m))/OData/OData.svc/"),
@@ -13,11 +11,9 @@ sap.ui.define([
 
         onInit : function () {
 
-            that = this;
-
             // Testing
             // Get Product from server -
-            //this.oModel.read("/Products", {success: this.readSuccessHandler, error: this.readRejectHandler}); // Get from server
+            this.oModel.read("/Products", {success: this.readSuccessHandler.bind(this), error: this.readRejectHandler.bind(this)}); // Get from server
         },
 
         createProduct : function(){
@@ -29,7 +25,7 @@ sap.ui.define([
                 Price: this.byId("price")._lastValue,
             };
 
-            this.oModel.create("/Products", product, { success: this.createSuccessHandler, error: this.createRejectHandler});
+            this.oModel.create("/Products", product, { success: this.createSuccessHandler.bind(this), error: this.createRejectHandler.bind(this)});
         },
 
         releaseDateChanged: function(oEvent){
@@ -54,7 +50,13 @@ sap.ui.define([
 
         readRejectHandler: function(){
             console.log("-----------FAILED!------------");
+            this.tester();
+        },
+
+        tester: function(){
+            console.log("------------HEY!---------------");
         }
+
     });
 
 });
